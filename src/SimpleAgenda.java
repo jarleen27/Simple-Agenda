@@ -3,6 +3,13 @@ import java.util.Scanner;
 public class SimpleAgenda {
     public static String[] contactos = new String[10];
 
+    public static void main(String[] args) {
+        agregarContacto();
+
+    }
+
+
+
     public static void agregarContacto() {
          Scanner sc = new Scanner(System.in);
          String contacto;
@@ -68,8 +75,6 @@ public class SimpleAgenda {
             }
         }
     }
-    public static void main(String[] args) {
 
-    }
 
 }
