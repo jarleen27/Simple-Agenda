@@ -1,4 +1,7 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
+import java.io.File;
 
 public class SimpleAgenda {
     public static String[] contactos = new String[10];
@@ -8,6 +11,22 @@ public class SimpleAgenda {
 
     }
 
+    public static void generarArchivo () throws IOException {
+        File arch  = new File("contactos.txt");
+        arch.createNewFile();
+        FileWriter escribir = new FileWriter(arch);
+        escribir.write("contacto,telefono\n" +
+
+                "Adan,8098551212\n" +
+
+                "Enmanuel,8294118787\n" +
+
+                "Raider,8097410032\n" +
+
+                "Roger,8095554141\n" );
+
+        escribir.close();
+    }
 
 
     public static void agregarContacto() {
